@@ -61,7 +61,7 @@ def add_items():
     return jsonify(json_list)
 
 
-@app.route('/items/<int:id>', methods=['POST'])
+@app.route('/items/<int:id>', methods=['DELETE'])
 def delete_items(id=0):
     list = session.get('item_data')
     json_list = json.loads(list)
